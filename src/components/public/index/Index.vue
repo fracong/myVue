@@ -12,7 +12,7 @@
   export default {
     data(){
       return {
-        haha1:"qweqweqweqwe",
+        haha1:"11",
       }
     },
     methods:{
