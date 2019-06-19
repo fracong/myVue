@@ -1,27 +1,19 @@
 <template>
   <div class="index">
-    <div class="index-top">{{haha1}}</div>
-    <div class="index-left" @click="aaa"></div>
-    <div class="index-right"></div>
+    <div class="index-top">123</div>
+    <div class="index-bottom">
+      <index-left-component :data="data"></index-left-component>
+    </div>
   </div>
 </template>
 
 <script>
-  import {httpIndex} from '../login/js/login.js'
-  import $ from 'jquery'
-  export default {
-    data(){
-      return {
-        haha1:"11",
-      }
-    },
-    methods:{
-      aaa:function(){
-        alert($(".index-top").html())
-        alert(httpIndex);
-      }
-    }
+import left from './left/Left.vue'
+export default {
+  components:{
+    indexLeftComponent:left
   }
+}
 </script>
 
 <style scoped>
