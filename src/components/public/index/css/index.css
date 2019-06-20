@@ -1,13 +1,22 @@
-.index-top {
-  height: 100px;
+.index .index-top {
+  height: 70px;
   width: 100%;
   margin-bottom: 10px;
   position: fixed;
   z-index: 100;
   left: 0;
   top: 0;
+  border-bottom: solid #e6e6e6 1px;
+  background-color:white;
 }
 
-.index-bottom {
-  margin-top: 105px;
+.index .index-top .index-logo{
+  height: 66px;
+  width: 25%;
+  float: left;
+  margin: 2px 0px 2px 5px;
+}
+
+.index .index-bottom {
+  margin-top: 70px;
 }

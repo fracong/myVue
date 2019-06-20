@@ -1,6 +1,9 @@
 <template>
   <div class="index">
-    <div class="index-top">123</div>
+    <div class="index-top">
+      <img class="index-logo"src="./img/my_logo.png"/>
+      <index-top-component :data="data"></index-top-component>
+    </div>
     <div class="index-bottom">
       <el-row class="tac">
         <el-col :span="15">
@@ -22,9 +25,11 @@
 
 <script>
 import left from './left/Left.vue'
+import top from './top/Top.vue'
 export default {
   components:{
-    indexLeftComponent:left
+    indexLeftComponent:left,
+    indexTopComponent:top
   }
 }
 </script>
@@ -35,6 +40,6 @@ export default {
     width: 15%;
   }
   .el-col-40{
-      width: 40%;
-    }
+    width: 40%;
+  }
 </style>
