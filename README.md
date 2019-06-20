@@ -1,7 +1,8 @@
-开发条件：安装webstorm、Nginx、Git程序
-登录页面
+# 开发条件：
+  安装webstorm、Nginx、Git程序
+# 登录页面
 ![Image text](https://github.com/fracong/myVue/blob/master/src/assets/introduce/login.png)
-首页页面-使用element-ui
+# 首页页面-使用element-ui
 ![Image text](https://github.com/fracong/myVue/blob/master/src/assets/introduce/index.png)
 
 
