@@ -1,0 +1,27 @@
+.tab-info .tab-info-top{
+  background-color: #7f979e;
+  height: 41px;
+}
+
+.tab-info .tab-title {
+  float: left;
+  text-align: center;
+  padding: 10px 0 10px 5px;
+  font-weight: 600;
+  color: white;
+}
+
+.tab-info .tab-action {
+  float: right;
+  text-align: center;
+  margin: 10px 10px 0 10px;
+  font-weight: 500;
+  color: white;
+  font-size: 15px;
+  border: solid 1px white;
+}
+
+.tab-info .tab-action:hover {
+  border: solid 2px white;
+}
+

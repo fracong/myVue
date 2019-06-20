@@ -9,13 +9,20 @@
         <el-col :span="15">
           <index-left-component :data="data"></index-left-component>
         </el-col>
-        <el-col :span="40">
-          <el-button>默认按钮</el-button>
-          <el-button type="primary">主要按钮</el-button>
-          <el-button type="success">成功按钮</el-button>
-          <el-button type="info">信息按钮</el-button>
-          <el-button type="warning">警告按钮</el-button>
-          <el-button type="danger">危险按钮</el-button>
+        <el-col :span="85">
+          <div class="tab-info index-bottom-right">
+            <div class="tab-info-top">
+              <div class="tab-title">人员表格</div>
+              <div class="tab-action" @click="addUser">新增</div>
+            </div>
+            <index-right-component :data="data"></index-right-component>
+            <el-pagination
+              :page-size="20"
+              :pager-count="11"
+              layout="prev, pager, next"
+              :total="1000">
+            </el-pagination>
+          </div>
         </el-col>
       </el-row>
       <router-view></router-view>
@@ -26,20 +33,36 @@
 <script>
 import left from './left/Left.vue'
 import top from './top/Top.vue'
+import right from './right/Right.vue'
 export default {
   components:{
     indexLeftComponent:left,
-    indexTopComponent:top
+    indexTopComponent:top,
+    indexRightComponent:right
+  },
+  methods: {
+    addUser(){
+      this.$alert('这是一段内容', '标题名称', {
+        confirmButtonText: '确定',
+        callback: action => {
+          this.$message({
+            type: 'info',
+            message: `action: ${ action }`
+          });
+        }
+      });
+    }
   }
 }
 </script>
 
 <style scoped>
   @import './css/index.css';
+  @import '../global/css/tabinfo.css';
   .el-col-15{
     width: 15%;
   }
-  .el-col-40{
-    width: 40%;
+  .el-col-85{
+    width: 85%;
   }
 </style>
