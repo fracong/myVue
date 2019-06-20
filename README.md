@@ -1,3 +1,6 @@
+开发条件：安装webstorm、Nginx、Git程序
+![Image text](https://github.com/fracong/myVue/blob/master/src/assets/introduce/index.png)
+
 # my
 
 > A Vue.js project
@@ -28,5 +31,3 @@ npm test
 ```
 
 For a detailed explanation on how things work, check out the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
-
-开发条件：安装webstorm、Nginx、Git程序
