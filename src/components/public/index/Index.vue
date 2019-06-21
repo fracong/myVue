@@ -13,14 +13,8 @@
           <div class="tab-info index-bottom-right">
             <div class="tab-info-top">
               <div class="tab-title">人员表格</div>
-              <div class="tab-action" @click="dialogFormVisible = true">新增</div>
-              <el-dialog title="新增用户" width="60%" class="dialog-title" :visible.sync="dialogFormVisible" :lock-scroll="lockScroll" :close-on-click-modal="closeOnClickModal">
-                <index-user-add-component :data="data"></index-user-add-component>
-                <div slot="footer" class="dialog-footer">
-                  <el-button @click="dialogFormVisible = false">取 消</el-button>
-                  <el-button type="primary" @click="dialogFormVisible = false">确 定</el-button>
-                </div>
-              </el-dialog>
+              <div class="tab-action" @click="handleAddUser">新增</div>
+              <index-user-add-component ref="addUser"></index-user-add-component>
             </div>
             <index-right-component :data="data"></index-right-component>
             <el-pagination
@@ -43,13 +37,6 @@ import top from './top/Top.vue'
 import right from './right/Right.vue'
 import userAdd from '../user/userAdd.vue'
 export default {
-  data() {
-    return {
-      dialogFormVisible: false,
-      lockScroll:false,
-      closeOnClickModal:false
-    };
-  },
   components:{
     indexLeftComponent:left,
     indexTopComponent:top,
@@ -57,6 +44,9 @@ export default {
     indexUserAddComponent:userAdd
   },
   methods: {
+    handleAddUser(){
+      this.$refs.addUser.clickDialogForm();
+    }
   }
 }
 </script>
@@ -64,5 +54,4 @@ export default {
 <style scoped>
   @import './css/index.css';
   @import '../global/css/tabinfo.css';
-  @import '../global/css/dialog.css';
 </style>

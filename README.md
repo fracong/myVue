@@ -4,6 +4,8 @@
 ![Image text](https://github.com/fracong/myVue/blob/master/src/assets/introduce/login.png)
 # 首页页面-使用element-ui
 ![Image text](https://github.com/fracong/myVue/blob/master/src/assets/introduce/index.png)
+# 用户页新增页面
+![Image text](https://github.com/fracong/myVue/blob/master/src/assets/introduce/userAdd.png)
 
 
 # my
