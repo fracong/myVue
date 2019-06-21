@@ -1,30 +1,10 @@
 <template>
   <div class="index">
-    <div class="index-top">
-      <img class="index-logo" src="./img/my_logo.png"/>
-      <index-top-component :data="data"></index-top-component>
-    </div>
+    <index-top-component :data="data"></index-top-component>
     <div class="index-bottom">
       <el-row class="tac">
-        <el-col :span="15">
-          <index-left-component :data="data"></index-left-component>
-        </el-col>
-        <el-col :span="85">
-          <div class="tab-info index-bottom-right">
-            <div class="tab-info-top">
-              <div class="tab-title">人员表格</div>
-              <div class="tab-action" @click="handleAddUser">新增</div>
-              <index-user-add-component ref="addUser"></index-user-add-component>
-            </div>
-            <index-right-component :data="data"></index-right-component>
-            <el-pagination
-              :page-size="20"
-              :pager-count="11"
-              layout="prev, pager, next"
-              :total="1000">
-            </el-pagination>
-          </div>
-        </el-col>
+        <index-left-component :data="data"></index-left-component>
+        <index-user-index-component :data="data"></index-user-index-component>
       </el-row>
       <router-view></router-view>
     </div>
@@ -32,26 +12,20 @@
 </template>
 
 <script>
-import left from './left/Left.vue'
-import top from './top/Top.vue'
-import right from './right/Right.vue'
-import userAdd from '../user/userAdd.vue'
+import left from '../global/include/left/Left.vue'
+import top from '../global/include/top/Top.vue'
+import userIndex from '../user/UserIndex.vue'
 export default {
   components:{
     indexLeftComponent:left,
     indexTopComponent:top,
-    indexRightComponent:right,
-    indexUserAddComponent:userAdd
-  },
-  methods: {
-    handleAddUser(){
-      this.$refs.addUser.clickDialogForm();
-    }
+    indexUserIndexComponent:userIndex
   }
 }
 </script>
 
 <style scoped>
-  @import './css/index.css';
-  @import '../global/css/tabinfo.css';
+  .index .index-bottom {
+    margin-top: 70px;
+  }
 </style>
