@@ -1,7 +1,7 @@
 <template>
   <div class="index">
     <div class="index-top">
-      <img class="index-logo"src="./img/my_logo.png"/>
+      <img class="index-logo" src="./img/my_logo.png"/>
       <index-top-component :data="data"></index-top-component>
     </div>
     <div class="index-bottom">
@@ -13,7 +13,14 @@
           <div class="tab-info index-bottom-right">
             <div class="tab-info-top">
               <div class="tab-title">人员表格</div>
-              <div class="tab-action" @click="addUser">新增</div>
+              <div class="tab-action" @click="dialogFormVisible = true">新增</div>
+              <el-dialog title="新增用户" width="60%" class="dialog-title" :visible.sync="dialogFormVisible" :lock-scroll="lockScroll" :close-on-click-modal="closeOnClickModal">
+                <index-user-add-component :data="data"></index-user-add-component>
+                <div slot="footer" class="dialog-footer">
+                  <el-button @click="dialogFormVisible = false">取 消</el-button>
+                  <el-button type="primary" @click="dialogFormVisible = false">确 定</el-button>
+                </div>
+              </el-dialog>
             </div>
             <index-right-component :data="data"></index-right-component>
             <el-pagination
@@ -34,24 +41,22 @@
 import left from './left/Left.vue'
 import top from './top/Top.vue'
 import right from './right/Right.vue'
+import userAdd from '../user/userAdd.vue'
 export default {
+  data() {
+    return {
+      dialogFormVisible: false,
+      lockScroll:false,
+      closeOnClickModal:false
+    };
+  },
   components:{
     indexLeftComponent:left,
     indexTopComponent:top,
-    indexRightComponent:right
+    indexRightComponent:right,
+    indexUserAddComponent:userAdd
   },
   methods: {
-    addUser(){
-      this.$alert('这是一段内容', '标题名称', {
-        confirmButtonText: '确定',
-        callback: action => {
-          this.$message({
-            type: 'info',
-            message: `action: ${ action }`
-          });
-        }
-      });
-    }
   }
 }
 </script>
@@ -59,10 +64,5 @@ export default {
 <style scoped>
   @import './css/index.css';
   @import '../global/css/tabinfo.css';
-  .el-col-15{
-    width: 15%;
-  }
-  .el-col-85{
-    width: 85%;
-  }
+  @import '../global/css/dialog.css';
 </style>

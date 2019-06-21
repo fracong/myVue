@@ -25,5 +25,11 @@
   padding: 10px 10px 0 10px;
 }
 
+.el-col-15{
+  width: 15%;
+}
 
+.el-col-85{
+  width: 85%;
+}
 
