@@ -29,12 +29,18 @@ export default new Router({
     {
       path: '/login',
       name: 'Login',
-      component: Login
+      component: Login,
+      meta: {
+        title: '登录页'
+      }
     },
     {
       path: '/index',
       name: 'Index',
-      component: Index
+      component: Index,
+      meta: {
+        title: '首页'
+      }
     }
   ]
 })
