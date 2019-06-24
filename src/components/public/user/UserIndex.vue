@@ -8,7 +8,6 @@
           <index-user-add-component ref="addUser"></index-user-add-component>
         </div>
         <index-user-table-list-component :data="data"></index-user-table-list-component>
-        <el-pagination :page-size="20" :pager-count="11" layout="prev, pager, next" :total="1000"></el-pagination>
       </div>
     </el-col>
   </div>
