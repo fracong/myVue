@@ -14,7 +14,7 @@
 </template>
 <script>
 import userTableList from './UserTableList.vue'
-import userAdd from './UserAdd.vue'
+import userAdd from './userAdd.vue'
 export default {
   components:{
     indexUserTableListComponent:userTableList,
