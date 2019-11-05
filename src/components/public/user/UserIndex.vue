@@ -7,7 +7,7 @@
           <div class="tab-action" @click="handleAddUser">新增</div>
           <index-user-add-component ref="addUser"></index-user-add-component>
         </div>
-        <index-user-table-list-component :data="data"></index-user-table-list-component>
+        <index-user-table-list-component ></index-user-table-list-component>
       </div>
     </el-col>
   </div>

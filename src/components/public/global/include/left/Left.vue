@@ -39,7 +39,9 @@
   import {httpServiceIndex} from '../../../constant.js'
 export default {
   data() {
-    return {};
+    return {
+        isCollapse:false
+    };
   },
   created(){
     this.initMenuList();

@@ -4,7 +4,7 @@
       :data="tableData"
       height="auto"
       border
-      stripe="true"
+      :stripe="stripe"
       style="width: 100%">
       <el-table-column
         prop="date"
@@ -31,6 +31,7 @@
   export default {
     data() {
       return {
+        stripe:true,
         tableData: [{
           date: '2013-01-03',
           name: 'fracong1',

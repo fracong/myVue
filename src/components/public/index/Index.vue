@@ -1,10 +1,10 @@
 <template>
   <div class="index">
-    <index-top-component :data="data"></index-top-component>
+    <index-top-component></index-top-component>
     <div class="index-bottom">
       <el-row class="tac">
-        <index-left-component :data="data"></index-left-component>
-        <index-user-index-component :data="data"></index-user-index-component>
+        <index-left-component></index-left-component>
+        <index-user-index-component></index-user-index-component>
       </el-row>
       <router-view></router-view>
     </div>

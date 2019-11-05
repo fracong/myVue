@@ -4,7 +4,7 @@
     <div class="index-top-left" style="float:right;">
       <el-row>
         <el-col :span="40">
-          <el-menu :default-active="activeIndex"
+          <el-menu :default-active="''"
             class="el-menu-demo"
             menu-trigger="hover/click"
             mode="horizontal"
